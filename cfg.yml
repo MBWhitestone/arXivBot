@@ -1,0 +1,27 @@
+# File: cfg.yml
+# This file contains the configuration of the arXiv bot.
+# Make sure to create regular backups of this file to prevent data loss.
+# MBWhitestone, 2021.
+
+# Discord bot key. Alternatively store as variable key in key.py.
+key:
+# Channel to send the messages to.
+paper_channel: papers
+# Lenght of a summary of a paper.
+summary_length: 256
+# Number of papers to retrieve per query.
+n_query: 3
+# Criterum to sort a query. Can be: relevance, lastUpdatedDate, submittedDate.
+sort_by: Relevance
+# Hex Color to append to paper message. If not specified based on search query.
+message_color:
+# Number of seconds between each query.
+query_interval: 3600
+# Defines the hotword for the bot to react on.
+hotword: '!arxiv'
+# Search queries.
+search:
+  cs.LG:
+    - GAN Violence
+# List of paper ids which are known and no notification should be send.
+known_papers: [1703.02528v1, 1712.02505v1, 1701.00160v4]
